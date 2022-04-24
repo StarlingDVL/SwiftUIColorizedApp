@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum CurrentColor {
+    case red, green, blue
+}
+
 struct ContentView: View {
     @State private var redSliderValue = Double.random(in: 0...255)
     @State private var greenSliderValue = Double.random(in: 0...255)
@@ -17,9 +21,9 @@ struct ContentView: View {
             Color.yellow.ignoresSafeArea()
             VStack {
                 ColorizedRectangleView(red: redSliderValue, green: greenSliderValue, blue: blueSliderValue)
-                SliderView(value: $redSliderValue, color: .red)
-                SliderView(value: $greenSliderValue, color: .green)
-                SliderView(value: $blueSliderValue, color: .blue)
+                SliderStackView(sliderValue: $redSliderValue, color: .red)
+                SliderStackView(sliderValue: $greenSliderValue, color: .green)
+                SliderStackView(sliderValue: $blueSliderValue, color: .blue)
                 Spacer()
             }
             .padding()
@@ -30,5 +34,17 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct SliderStackView: View {
+    @Binding var sliderValue: Double
+    var color: Color
+    
+    var body: some View {
+        HStack(spacing: 10) {
+            ColorValueTextView(text: sliderValue)
+            SliderView(value: $sliderValue, color: color)
+        }
     }
 }
