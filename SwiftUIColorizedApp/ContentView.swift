@@ -8,23 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var sliderValue = 100.0
-    @State private var sliderTextValue = ""
-    
+    @State private var redSliderValue = Double.random(in: 0...255)
+    @State private var greenSliderValue = Double.random(in: 0...255)
+    @State private var blueSliderValue = Double.random(in: 0...255)
+
     var body: some View {
         ZStack {
             Color.yellow.ignoresSafeArea()
             VStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .frame(width: 350, height: 200)
-                HStack(spacing: 10) {
-                    Text("\(lround(sliderValue))")
-                        .frame(width: 50)
-                    Slider(value: $sliderValue, in:  0...255)
-                    TextField("255", text: $sliderTextValue)
-                        .textFieldStyle(.roundedBorder)
-                        .frame(width: 50)
-                }
+                ColorizedRectangleView(red: redSliderValue, green: greenSliderValue, blue: blueSliderValue)
+                SliderView(value: $redSliderValue, color: .red)
+                SliderView(value: $greenSliderValue, color: .green)
+                SliderView(value: $blueSliderValue, color: .blue)
                 Spacer()
             }
             .padding()
