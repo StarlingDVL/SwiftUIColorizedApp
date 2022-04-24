@@ -14,6 +14,7 @@
 		2BA55E122815F24D00A0A451 /* ColorizedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA55E112815F24D00A0A451 /* ColorizedRectangleView.swift */; };
 		2BA55E142815F52200A0A451 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA55E132815F52200A0A451 /* SliderView.swift */; };
 		2BA55E162816004600A0A451 /* ColorValueText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA55E152816004600A0A451 /* ColorValueText.swift */; };
+		2BA55E18281602FC00A0A451 /* ColorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA55E17281602FC00A0A451 /* ColorTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2BA55E112815F24D00A0A451 /* ColorizedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizedRectangleView.swift; sourceTree = "<group>"; };
 		2BA55E132815F52200A0A451 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		2BA55E152816004600A0A451 /* ColorValueText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValueText.swift; sourceTree = "<group>"; };
+		2BA55E17281602FC00A0A451 /* ColorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				2BA55E012815C78700A0A451 /* SwiftUIColorizedAppApp.swift */,
 				2BA55E032815C78700A0A451 /* ContentView.swift */,
+				2BA55E17281602FC00A0A451 /* ColorTextFieldView.swift */,
 				2BA55E152816004600A0A451 /* ColorValueText.swift */,
 				2BA55E132815F52200A0A451 /* SliderView.swift */,
 				2BA55E112815F24D00A0A451 /* ColorizedRectangleView.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA55E18281602FC00A0A451 /* ColorTextFieldView.swift in Sources */,
 				2BA55E122815F24D00A0A451 /* ColorizedRectangleView.swift in Sources */,
 				2BA55E142815F52200A0A451 /* SliderView.swift in Sources */,
 				2BA55E162816004600A0A451 /* ColorValueText.swift in Sources */,
